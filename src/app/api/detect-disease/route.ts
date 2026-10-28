@@ -177,15 +177,18 @@ Safety requirements:
 
     return NextResponse.json({ answer: text });
   } catch (error: unknown) {
+    const timedOut = error instanceof Error && error.name === "TimeoutError";
     const details = error instanceof Error ? error.message : String(error);
-    console.error("CROP DISEASE API ERROR:", details);
+    if (!timedOut) console.error("Crop disease API failed:", details);
 
     return NextResponse.json(
       {
-        error: "Unable to analyze the crop image right now.",
+        error: timedOut
+          ? "Image analysis took too long. Try a smaller image or try again later."
+          : "Unable to analyze the crop image right now.",
         details: process.env.NODE_ENV === "development" ? details : undefined,
       },
-      { status: 500 }
+      { status: timedOut ? 504 : 500 }
     );
   }
 }
