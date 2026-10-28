@@ -68,6 +68,7 @@ export async function POST(request: Request) {
         ],
       }),
       cache: "no-store",
+      signal: AbortSignal.timeout(30_000),
     });
 
     const raw = await upstream.text();
