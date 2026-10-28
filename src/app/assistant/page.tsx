@@ -131,7 +131,7 @@ export default function FarmingAssistantPage() {
           <select className="input !w-auto" value={lang} onChange={(e) => changeLanguage(e.target.value as Language)} aria-label="Language">
             <option value="Marathi">मराठी</option><option value="Hindi">हिन्दी</option><option value="English">English</option>
           </select>
-          <Link className="btn2" href="/">{c.back}</Link>
+          <a className="btn2 inline-flex items-center justify-center" href="/" onClick={(e) => { e.preventDefault(); window.location.assign("/"); }}>{c.back}</a>
         </div>
       </header>
 
