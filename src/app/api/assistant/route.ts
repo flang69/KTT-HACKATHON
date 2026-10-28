@@ -92,7 +92,11 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ answer: answer.trim() });
   } catch (error) {
-    console.error("Farm assistant route failed:", error);
-    return NextResponse.json({ error: "Could not reach the AI assistant. Check your connection and try again." }, { status: 500 });
+    const timedOut = error instanceof Error && error.name === "TimeoutError";
+    if (!timedOut) console.error("Farm assistant route failed:", error);
+    return NextResponse.json(
+      { error: timedOut ? "The AI assistant took too long to respond. Please try again." : "Could not reach the AI assistant. Check your connection and try again." },
+      { status: timedOut ? 504 : 500 }
+    );
   }
 }
