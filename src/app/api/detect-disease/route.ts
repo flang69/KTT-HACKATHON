@@ -125,6 +125,7 @@ Safety requirements:
         ],
       }),
       cache: "no-store",
+      signal: AbortSignal.timeout(45_000),
     });
 
     const responseText = await upstream.text();
