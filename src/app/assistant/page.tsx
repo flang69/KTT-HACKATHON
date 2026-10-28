@@ -12,7 +12,7 @@ const copy = {
     title: "Farm Help", subtitle: "Ask farming questions in your language",
     intro: "Namaste! I can help with general crop care, watering, pests, weather precautions and farm expenses. Tell me your crop and what you are noticing.",
     placeholder: "Ask about your crop…", send: "Ask", back: "Back to dashboard",
-    quickTitle: "Try asking", disclaimer: "Prototype guidance only. This version uses prepared guidance, not a connected AI model. Advice depends on your location, crop stage and local conditions. For serious crop disease, confirm with your local agricultural officer or KVK.",
+    quickTitle: "Try asking", disclaimer: "AI-generated general guidance, not a confirmed diagnosis. Advice depends on your crop, location and local conditions. For serious crop disease or risky treatment decisions, confirm with your local agricultural officer or KVK.",
     prompts: ["How should I water my crop?", "What should I do about pests?", "How can I reduce farming costs?", "What should I check before using fertilizer?"],
     water: "Watering depends on the crop, soil, crop stage and recent rain. Check soil moisture near the root zone before irrigating, avoid waterlogging, and prefer cooler morning or evening hours. Tell me your crop, soil type and when it last rained for more relevant general guidance.",
     pest: "First identify the pest and the affected part of the plant. Check a few plants across the field, remove badly affected plant parts only where appropriate, and avoid spraying an unknown chemical. Take clear photos and ask your local Krishi Sahayak or KVK before choosing a pesticide. Follow the product label and protective equipment instructions.",
@@ -30,7 +30,7 @@ const copy = {
     title: "शेती मदतनीस", subtitle: "तुमच्या भाषेत शेतीविषयक प्रश्न विचारा",
     intro: "नमस्कार! पीक काळजी, पाणी, कीड, हवामानातील खबरदारी आणि शेतीखर्च याबाबत सामान्य मार्गदर्शन करू शकतो. तुमचे पीक आणि त्यात काय दिसत आहे ते सांगा.",
     placeholder: "तुमच्या पिकाबद्दल विचारा…", send: "विचारा", back: "डॅशबोर्डवर परत जा",
-    quickTitle: "असे प्रश्न विचारा", disclaimer: "ही प्राथमिक नमुना मार्गदर्शन सुविधा आहे. या आवृत्तीत तयार केलेले मार्गदर्शन आहे; प्रत्यक्ष AI मॉडेल जोडलेले नाही. योग्य सल्ला स्थान, पीक अवस्था आणि स्थानिक परिस्थितीवर अवलंबून असतो. गंभीर रोग किंवा किडीसाठी स्थानिक कृषी अधिकारी किंवा कृषी विज्ञान केंद्राशी संपर्क साधा.",
+    quickTitle: "असे प्रश्न विचारा", disclaimer: "हे AI-आधारित सामान्य मार्गदर्शन आहे; निश्चित निदान नाही. सल्ला पीक, स्थान आणि स्थानिक परिस्थितीवर अवलंबून असतो. गंभीर रोग किंवा जोखमीच्या उपचारांसाठी स्थानिक कृषी अधिकारी किंवा कृषी विज्ञान केंद्राचा सल्ला घ्या.",
     prompts: ["पिकाला पाणी कधी द्यावे?", "किड दिसल्यास काय करावे?", "शेतीचा खर्च कसा कमी करावा?", "खत वापरण्यापूर्वी काय तपासावे?"],
     water: "पाणी देणे हे पीक, माती, पिकाची अवस्था आणि अलीकडील पावसावर अवलंबून असते. पाणी देण्यापूर्वी मुळांजवळील मातीतील ओलावा तपासा. शेतात पाणी साचू देऊ नका आणि शक्यतो सकाळी किंवा संध्याकाळी पाणी द्या. अधिक योग्य सामान्य मार्गदर्शनासाठी पीक, मातीचा प्रकार आणि शेवटचा पाऊस कधी झाला ते सांगा.",
     pest: "सर्वप्रथम किड ओळखण्याचा आणि झाडाचा कोणता भाग बाधित आहे हे पाहण्याचा प्रयत्न करा. शेतातील वेगवेगळ्या भागांतील काही झाडे तपासा. किड ओळखल्याशिवाय कोणतेही रसायन फवारू नका. स्पष्ट फोटो घेऊन स्थानिक कृषी सहाय्यक किंवा कृषी विज्ञान केंद्राचा सल्ला घ्या. औषधाच्या लेबलवरील सूचना आणि सुरक्षा साधने पाळा.",
@@ -48,7 +48,7 @@ const copy = {
     title: "खेती सहायक", subtitle: "अपनी भाषा में खेती से जुड़े सवाल पूछें",
     intro: "नमस्ते! मैं फसल की देखभाल, सिंचाई, कीट, मौसम की सावधानियों और खेती के खर्च पर सामान्य जानकारी दे सकता हूँ। अपनी फसल और उसमें दिख रही समस्या बताइए।",
     placeholder: "अपनी फसल के बारे में पूछें…", send: "पूछें", back: "डैशबोर्ड पर लौटें",
-    quickTitle: "ऐसे सवाल पूछें", disclaimer: "यह शुरुआती नमूना मार्गदर्शन है। इस संस्करण में पहले से तैयार सुझाव हैं; कोई वास्तविक AI मॉडल जुड़ा नहीं है। सही सलाह स्थान, फसल की अवस्था और स्थानीय परिस्थितियों पर निर्भर करती है। गंभीर रोग या कीट के लिए स्थानीय कृषि अधिकारी या कृषि विज्ञान केंद्र से सलाह लें।",
+    quickTitle: "ऐसे सवाल पूछें", disclaimer: "यह AI से मिली सामान्य जानकारी है, पक्का निदान नहीं। सलाह फसल, स्थान और स्थानीय परिस्थितियों पर निर्भर करती है। गंभीर रोग या जोखिम वाले उपचार के लिए स्थानीय कृषि अधिकारी या कृषि विज्ञान केंद्र से पुष्टि करें।",
     prompts: ["फसल में पानी कब देना चाहिए?", "कीट दिखें तो क्या करें?", "खेती का खर्च कैसे घटाएँ?", "खाद डालने से पहले क्या जाँचें?"],
     water: "सिंचाई फसल, मिट्टी, फसल की अवस्था और हाल की बारिश पर निर्भर करती है। पानी देने से पहले जड़ों के पास मिट्टी की नमी जाँचें, खेत में पानी जमा न होने दें और संभव हो तो सुबह या शाम सिंचाई करें। बेहतर सामान्य जानकारी के लिए फसल, मिट्टी का प्रकार और आखिरी बारिश कब हुई, यह बताएँ।",
     pest: "पहले कीट की पहचान करने और पौधे का कौन-सा हिस्सा प्रभावित है, यह देखने की कोशिश करें। खेत के अलग-अलग हिस्सों में कुछ पौधों की जाँच करें। कीट की पहचान किए बिना कोई रसायन न छिड़कें। साफ तस्वीरें लेकर स्थानीय कृषि सहायक या कृषि विज्ञान केंद्र से सलाह लें। उत्पाद के लेबल और सुरक्षा निर्देशों का पालन करें।",
@@ -83,16 +83,33 @@ export default function FarmingAssistantPage() {
   const [messages, setMessages] = useState<Message[]>([{ role: "assistant", text: copy.Marathi.intro }]);
   const [busy, setBusy] = useState(false);
 
-  function ask(text = question) {
+  async function ask(text = question) {
     const q = text.trim();
-    if (!q) return;
+    if (!q || busy) return;
+
+    const history = messages.map((message) => ({
+      role: message.role,
+      text: message.text,
+    }));
     setBusy(true);
     setMessages((old) => [...old, { role: "user", text: q }]);
     setQuestion("");
-    window.setTimeout(() => {
-      setMessages((old) => [...old, { role: "assistant", text: makeAnswer(q, lang) }]);
+
+    try {
+      const response = await fetch("/api/assistant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: q, language: lang, history }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(typeof data?.error === "string" ? data.error : "The assistant could not answer. Please try again.");
+      setMessages((old) => [...old, { role: "assistant", text: data.answer }]);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Could not reach the AI assistant. Please try again.";
+      setMessages((old) => [...old, { role: "assistant", text: message }]);
+    } finally {
       setBusy(false);
-    }, 350);
+    }
   }
 
   function changeLanguage(next: Language) {
