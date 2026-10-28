@@ -125,7 +125,6 @@ Safety requirements:
         ],
       }),
       cache: "no-store",
-      signal: AbortSignal.timeout(45_000),
     });
 
     const responseText = await upstream.text();
@@ -177,18 +176,15 @@ Safety requirements:
 
     return NextResponse.json({ answer: text });
   } catch (error: unknown) {
-    const timedOut = error instanceof Error && error.name === "TimeoutError";
     const details = error instanceof Error ? error.message : String(error);
-    if (!timedOut) console.error("Crop disease API failed:", details);
+    console.error("CROP DISEASE API ERROR:", details);
 
     return NextResponse.json(
       {
-        error: timedOut
-          ? "Image analysis took too long. Try a smaller image or try again later."
-          : "Unable to analyze the crop image right now.",
+        error: "Unable to analyze the crop image right now.",
         details: process.env.NODE_ENV === "development" ? details : undefined,
       },
-      { status: timedOut ? 504 : 500 }
+      { status: 500 }
     );
   }
 }

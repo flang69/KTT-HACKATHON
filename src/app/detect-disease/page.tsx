@@ -208,8 +208,6 @@ export default function CropDiseasePage() {
 
           {preview && (
             <div className="mt-5">
-              {/* Blob URLs are local previews; next/image does not add value for this temporary upload. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={preview} alt="Selected crop" className="max-h-96 w-full rounded-xl bg-gray-50 object-contain" />
               <p className="mt-2 break-all text-sm text-gray-500">{file?.name}</p>
             </div>
